@@ -11,12 +11,13 @@ public class App
 	
 	public static void main(String[] args){
 		System.out.println("Enter the Number");
-		Scanner s=new Scanner(System.in);
+		Scanner s1=new Scanner(System.in);
 
-		int p=s.nextInt();
-		boolean t=CheckNum(p);
+		
+		int i=s1.nextInt();
+		boolean b1=CheckNum(i);
 
-		if(t==true) System.out.println("Even number!");
+		if(b1==true) System.out.println("Even number!");
 		else System.out.println("Odd number!");
 	}
 
