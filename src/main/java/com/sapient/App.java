@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class App 
 {
 	
-	public static boolean CheckNum(int n){
-		if(n%2==0) return true;
+	public static boolean CheckNum(int i){
+		if(i%2==0) return true;
 		return false;
 	}
 	
