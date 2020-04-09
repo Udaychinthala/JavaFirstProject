@@ -14,7 +14,7 @@ public class App
 		Scanner s=new Scanner(System.in);
 
 		int p=s.nextInt();
-		boolean t=check(p);
+		boolean t=CheckNum(p);
 
 		if(t==true) System.out.println("Even number!");
 		else System.out.println("Odd number!");

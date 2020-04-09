@@ -6,34 +6,32 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AppTest {
-    private App MyApp;
+    private App Myapp;
     
-   
-   @Before
+    @Before
     public void setup() {
-        MyApp = new App();
+        Myapp = new App();
     }
 	
     
     //case1 
     @Test
     public void testOne() {
-        boolean count = MyApp.CheckNum(7);
+        boolean count = Myapp.CheckNum(7);
         assertTrue(count == false);
     }
-	
-	//case 2
+
+	//case2
     @Test
     public void testTwenty() {
-        boolean count = MyApp.CheckNum(121);
+        boolean count = Myapp.CheckNum(80);
         assertTrue(count == true);
     }
-	
-	
-	//case3 
+
+	//case3
     @Test
     public void testNinteen() {
-        boolean count = MyApp.CheckNum(100);
+        boolean count = Myapp.CheckNum(171);
         assertTrue(count == false);
     }
 
