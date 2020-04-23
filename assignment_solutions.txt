@@ -1,0 +1,15 @@
+1.select modulecode, duration from modules where duration<6;
+2.select batchcode, trainers.trainerid, coursecode, startdate, capacity, batchstrength from batches inner join trainers on batches.trainerid=trainers.trainerid where trainername='KRISHNAN';
+3.select modulename from courseandmodules inner join modules on courseandmodules.modulecode=modules.modulecode where coursecode=100;
+4.select modulename,coursecode from courseandmodules inner join modules on courseandmodules.modulecode=modules.modulecode where coursecode=100;
+5.select count(modulename) as NumberofModules from courseandmodules inner join modules on courseandmodules.modulecode=modules.modulecode where coursecode=100;
+6.select courseandmodules.coursecode,count(modulename) as NumberofModules from courseandmodules inner join modules on courseandmodules.modulecode=modules.modulecode GROUP BY courseandmodules.coursecode;
+7.select title,fees from courses order by fees desc limit 1;
+8.select studentid,studentname,students.batchcode,place,phone from students inner join batches on students.batchcode=batches.batchcode where batches.batchcode=3001;
+9.select studentid,studentname,batchcode,place,phone from students where place='CHENNAI';
+10.select count(modulecode) as LESSTHANSIXDAYS from modules where duration<6;
+11.select batchcode,courses.title,startdate from batches inner join courses on courses.coursecode=batches.coursecode where startdate between '2012-05-01' and '2012-05-31';
+12.select courses.coursecode,title,fees from batches inner join courses on batches.coursecode=courses.coursecode where startdate not between '2012-01-01' and '2012-01-31';
+13.select modulename from modules inner join courseandmodules on modules.modulecode=courseandmodules.modulecode inner join courses on courseandmodules.coursecode=courses.coursecode where title='ORACLE DBA' group by modules.modulename;
+14.select studentid, studentname, students.batchcode,place,phone from students inner join batches on students.batchcode=batches.batchcode where place='CHENNAI' and startdate between '2012-01-01' and '2012-12-31';
+15.select studentid,studentname from students inner join batches on students.batchcode=batches.batchcode where batches.coursecode=200;
