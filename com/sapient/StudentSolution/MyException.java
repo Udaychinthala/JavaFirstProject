@@ -1,11 +1,16 @@
 package com.sapient.StudentSolution;
 
 public class MyException extends Exception {
-	String id;
+	
+	public String id;
+	
 	public MyException(String id) {
+
 		this.id=id;
 	}
+	
 	public String toString() {
-		return id+" not found";
+	
+	return id+" not found";
 	}
 }
